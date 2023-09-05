@@ -7,6 +7,10 @@ import reuploading_circuit
 class QConv2D:
     def __init__(self, filters, kernel_size, strides, drc_hyperparameters, layer_id, padding=None):
         self.filters = filters
+        """
+        when the module is instanciated, each module has to have a unique layer_id
+        in order to work with tensorflow. It suffices to be a number e.g. 1,2..
+        """
         self.layer_id = layer_id
         self.padding = padding
 
